@@ -12,11 +12,13 @@ import com.comcast.crm.Listners.RetryAnalyzer;
 import com.crm.generic.baseUtility.BaseClass;
 
 import GenericUtility.ExcelUtility;
+import GenericUtility.JavaUtility;
 import GenericUtility.WebdriverUtility;
 import ObjectRepository.HomePage;
 import ObjectRepository.ProductPage;
 
 public class CreateProductPage extends BaseClass {
+	
 
 	//@Test(retryAnalyzer = RetryAnalyzer.class)
 	@Test
@@ -26,6 +28,9 @@ public class CreateProductPage extends BaseClass {
 		String prdName = excelUtility.readDataFromExcel("Sheet1", 4, 2);
 		String price = excelUtility.readDataFromExcel("Sheet1", 4, 3);
 		WebdriverUtility utility = new WebdriverUtility();
+		JavaUtility javaUtility=new JavaUtility();
+		String RD = javaUtility.RandomData();
+		prdName=prdName+RD;
 		//login to app
 		HomePage homePage=new HomePage(driver);
 		homePage.hmPage();
