@@ -29,7 +29,7 @@ public class BaseClass {
 	public WebdriverUtility utility=new WebdriverUtility();
 	public JavaUtility javaUtility=new JavaUtility();
 
-	public WebDriver driver = null;
+	public WebDriver driver;
 
 	@BeforeSuite(groups = {"smoke", "regression"})
 	public void BS() {

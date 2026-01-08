@@ -5,6 +5,12 @@
 <listener class-name="com.comcast.crm.Listners.ListnersImplementation"></listener>
 </listeners>
   <test thread-count="5" name="Test">
+  <!-- for group execution need to add this code  -->
+  <!-- <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups> -->
     <classes>
       <class name="com.crm.comcast.CreateContactTest.CreateOrgTest"/>
       <class name="com.crm.comcast.CreateProductTest.CreateProductPage"/>
